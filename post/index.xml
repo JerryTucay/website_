@@ -6,10 +6,19 @@
     <description>Recent content in Posts on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2016 21:49:57 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ethics of Data Science</title>
+      <link>/2019/04/25/ethics-of-data-science/</link>
+      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/25/ethics-of-data-science/</guid>
+      <description>After perusing through the data is beautiful thread the first thing that caught my eye were all the stunning graphs that people created. For example i came across a visual of united states that showed where each state placed based on per capita per sales of different alcoholic beverages. I was shocked to see that new Hampshire was the top five if nor first place for all of them. I would assume though they raked the states by proportions not by just sheer amount.</description>
+    </item>
     
     <item>
       <title>A Plain Markdown Post</title>
