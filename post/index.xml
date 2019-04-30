@@ -6,10 +6,20 @@
     <description>Recent content in Posts on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Basic Models</title>
+      <link>/2019/04/29/basic-models/</link>
+      <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/04/29/basic-models/</guid>
+      <description>\[LocalTopic=\beta_o+ \beta_1OpposeAny \]
+EstimateStd. Errort valuePr(&amp;gt;|t|)(Intercept)0.55250.005098108.40oppose_any-0.70870.02753-25.744.929e-114Fitting linear model: local_topic ~ oppose_anyObservationsResidual Std. Error\(R^2\)Adjusted \(R^2\)10680.11540.38330.3828For every one unit increase of the proportion of posts that oppose rival political parties/beliefs, the proportion of posts that are about their state or district decrease by .</description>
+    </item>
     
     <item>
       <title>Ethics of Data Science</title>
