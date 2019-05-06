@@ -27,7 +27,9 @@
       <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/04/29/intermediate-anaylsis/</guid>
-      <description></description>
+      <description>k-fold cross-validation
+## [1] 0.01333858boot straped lm coeffecients
+The graph shows the correlation between a Congressman’s ratio of local posts and ratio of opposing posts. There’s is a clear negative correlation between the two variables of .62. The green line represents the 1068 bootstrapped linear models. As you can see it covers about the same area as the gray part that comes from the geom_smooth which represents the confidence interval of my model.</description>
     </item>
     
     <item>
