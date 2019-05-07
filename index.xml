@@ -6,10 +6,20 @@
     <description>Recent content on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Importance of a Visual Aid</title>
+      <link>/2019/05/06/the-importance-of-a-visual-aid/</link>
+      <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/06/the-importance-of-a-visual-aid/</guid>
+      <description>Visualations are the easiest way to get a point across or to tell a story. One’s visual can make or break a presentation, so its safe to say that you shouldn’t take them lightly. Its important to take in to acount what your visiaul is telling the world and whether its telling the world the correct thing.
+plot3&amp;lt;-ggplot(facebook, aes(party))+ geom_bar()+ ggtitle(&amp;quot;Politcal Party&amp;quot;)plot2&amp;lt;-ggplot(facebook, aes(party, fill= party))+ geom_bar()+ ggtitle(&amp;quot;Politcal Party&amp;quot;)+ scale_fill_manual(&amp;quot;legend&amp;quot;, values = c(&amp;quot;Democratic Party&amp;quot; = &amp;quot;blue&amp;quot;, &amp;quot;Republican Party&amp;quot; = &amp;quot;red&amp;quot;)) + theme(legend.</description>
+    </item>
     
     <item>
       <title>Basic Models</title>
