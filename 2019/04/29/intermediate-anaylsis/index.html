@@ -75,14 +75,23 @@
       
 
 
-<p>k-fold cross-validation</p>
+<div id="k-fold-cross-validation" class="section level1">
+<h1>K-Fold Cross-Validation</h1>
+<p>The k-fold method involves randomly dividing the set of observations into k groups or folds of approximately equal sizes. The process involves all but one using those to train your data and then using that one to test the efficiency of your model. After averaging the mean standard error from each of the k tests we can tell how well our model is predicting. Lower the number indicating a better model.</p>
+<pre class="r"><code>set.seed(74747)
+glm_fit &lt;- glm(local_topic~oppose_any, data= facebook)
+cv.error &lt;- cv.glm(facebook, glm_fit, K= 6 )$delta[1]
+cv.error</code></pre>
 <pre><code>## [1] 0.01333858</code></pre>
-<p>boot straped lm coeffecients</p>
+</div>
+<div id="boot-straped-lm-coeffecients" class="section level1">
+<h1>Boot Straped lm Coeffecients</h1>
 <p><img src="/post/2019-04-29-intermediate-anaylsis_files/figure-html/unnamed-chunk-3-1.png" width="672" /> The graph shows the correlation between a Congressman’s ratio of local posts and ratio of opposing posts. There’s is a clear negative correlation between the two variables of .62. The green line represents the 1068 bootstrapped linear models. As you can see it covers about the same area as the gray part that comes from the geom_smooth which represents the confidence interval of my model.</p>
 <p>trees</p>
 <pre><code>## [1] &quot;session&quot;     &quot;party&quot;       &quot;name&quot;        &quot;bioguide_id&quot; &quot;oppose_any&quot; 
 ## [6] &quot;support_any&quot; &quot;local_topic&quot; &quot;total_posts&quot;</code></pre>
 <p><img src="/post/2019-04-29-intermediate-anaylsis_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
 
     </div>
   </article>
@@ -119,6 +128,9 @@
 
 
     
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
   </body>

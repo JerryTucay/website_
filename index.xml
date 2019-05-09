@@ -28,7 +28,7 @@ plot3&amp;lt;-ggplot(facebook, aes(party))+ geom_bar()+ ggtitle(&amp;quot;Politc
       
       <guid>/2019/04/29/basic-models/</guid>
       <description>\[LocalTopic=\beta_o+ \beta_1OpposeAny \]
-EstimateStd. Errort valuePr(&amp;gt;|t|)(Intercept)0.55250.005098108.40oppose_any-0.70870.02753-25.744.929e-114Fitting linear model: local_topic ~ oppose_anyObservationsResidual Std. Error\(R^2\)Adjusted \(R^2\)10680.11540.38330.3828For every one unit increase of the proportion of posts that oppose rival political parties/beliefs, the proportion of posts that are about their state or district decrease by .</description>
+model&amp;lt;- lm(local_topic~oppose_any, data= facebook)pander::pander(summary(model))EstimateStd. Errort valuePr(&amp;gt;|t|)(Intercept)0.55250.005098108.40oppose_any-0.70870.02753-25.744.929e-114Fitting linear model: local_topic ~ oppose_anyObservationsResidual Std. Error\(R^2\)Adjusted \(R^2\)10680.11540.38330.3828For every one unit increase of the proportion of posts that oppose rival political parties/beliefs, the proportion of posts that are about their state or district decrease by .</description>
     </item>
     
     <item>
@@ -37,9 +37,7 @@ plot3&amp;lt;-ggplot(facebook, aes(party))+ geom_bar()+ ggtitle(&amp;quot;Politc
       <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/04/29/intermediate-anaylsis/</guid>
-      <description>k-fold cross-validation
-## [1] 0.01333858boot straped lm coeffecients
-The graph shows the correlation between a Congressman’s ratio of local posts and ratio of opposing posts. There’s is a clear negative correlation between the two variables of .62. The green line represents the 1068 bootstrapped linear models. As you can see it covers about the same area as the gray part that comes from the geom_smooth which represents the confidence interval of my model.</description>
+      <description>K-Fold Cross-ValidationThe k-fold method involves randomly dividing the set of observations into k groups or folds of approximately equal sizes. The process involves all but one using those to train your data and then using that one to test the efficiency of your model. After averaging the mean standard error from each of the k tests we can tell how well our model is predicting. Lower the number indicating a better model.</description>
     </item>
     
     <item>
@@ -57,7 +55,7 @@ The graph shows the correlation between a Congressman’s ratio of local posts a
       <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/04/25/the-begining-of-a-data-sceince-project/</guid>
-      <description>The begining of every data prowl begins with some pretty graphs. In order to understand the data, to its fullest, univariate and bivariate graphs are a great way to go about that. A univariate graph or a graph expressing only a single variable tells the story of the single graph. Answering several important quetions. Is it normally distrubited? Do the numbers/levels make sense? What do i need to fix/change and so on.</description>
+      <description>The beginning of every data prowl begins with some pretty graphs. In order to understand the data, to its fullest, uni variate and bivariate graphs are a great way to go about that. A univariate graph or a graph expressing only a single variable tells the story of the single graph. Answering several important questions. Is it normally distributed? Do the numbers/levels make sense? What do i need to fix/change and so on.</description>
     </item>
     
     <item>
