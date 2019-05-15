@@ -22,6 +22,11 @@
 
 
 
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
 <link rel="stylesheet" href="/css/fonts.css" media="all">
 <link rel="stylesheet" href="/css/main.css" media="all">
 
@@ -57,7 +62,7 @@
 
   <article class="article">
     
-    <span class="article-duration">2 min read</span>
+    <span class="article-duration">3 min read</span>
     
 
     <h1 class="article-title">The begining of a Data Sceince Project</h1>
@@ -70,12 +75,37 @@
       
 
 
+<div id="data" class="section level1">
+<h1>Data</h1>
+<p>The data set comes from the Pew research center. It explores 1068 different members of congress from the 114th and 115th congress and their Facebook post trends. The data set was already clean. \</p>
+<div id="variables" class="section level3">
+<h3>Variables</h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\textbf{Party}\)</span>: Used to differentiate between a Democrat or a Republican.</li>
+<li><span class="math inline">\(\textbf{Oppose any}\)</span>: The proportion of posts in which each member opposed Barack Obama, Hillary Clinton, or Democrats and/or liberals (if the member is a Republican) or the proportion of posts in which each member opposed Donald Trump or Republicans and/or conservatives (if the member is a Democrat), in each congress.</li>
+<li><span class="math inline">\(\textbf{Support any}\)</span>: The proportion of posts in which each member supported Barack Obama, Hillary Clinton, or Democrats and/or liberals (if the member is a Democrat) or the proportion of posts in which each member supported Donald Trump or Republicans and/or conservatives (if the member is a Republican), in each congress.</li>
+<li><span class="math inline">\(\textbf{Local topic}\)</span>: The proportion of posts in which each member discussed mention a place, group, individual(s), or event in the politician’s state or district, in each congress.</li>
+</ol>
+</div>
+</div>
+<div id="gettiing-started" class="section level1">
+<h1>Gettiing started</h1>
 <p>The beginning of every data prowl begins with some pretty graphs. In order to understand the data, to its fullest, uni variate and bivariate graphs are a great way to go about that. A univariate graph or a graph expressing only a single variable tells the story of the single graph. Answering several important questions. Is it normally distributed? Do the numbers/levels make sense? What do i need to fix/change and so on. A bivariate graph is a way to explore the relationships between two different variables. As a data scientist we need to understand how the variables interact or whether they interact at all. Now enough chit chat lets get to the fun.</p>
-<p><img src="/post/2019-04-25-the-begining-of-a-data-sceince-project_files/figure-html/unnamed-chunk-1-1.png" width="672" /> The local topics graph has a range of .06 to .85 and is fairly normally distributed with a good amount of variation. The mean ratio here is .45 seen in red.</p>
+<pre class="r"><code>plot1&lt;-ggplot(facebook, aes(local_topic))+ geom_histogram(bins=30)+ ggtitle(&quot;Local Topic&quot;)+ geom_vline(xintercept = mean(facebook$local_topic), color=&quot;red&quot;)+ geom_vline( xintercept=median(facebook$local_topic), color=&quot;green&quot;)
+
+plot2&lt;-ggplot(facebook, aes(oppose_any))+ geom_histogram(bins=30)+ ggtitle(&quot;Opposing posts&quot;)+ geom_vline(xintercept = mean(facebook$oppose_any), color=&quot;red&quot;)+ geom_vline( xintercept=median(facebook$oppose_any), color=&quot;green&quot;)
+
+plot3&lt;-ggplot(facebook, aes(party))+ geom_bar()+ ggtitle(&quot;Politcal Party&quot;)
+
+
+grid.arrange(plot1,plot2,plot3, ncol=2)</code></pre>
+<p><img src="/post/2019-04-25-the-begining-of-a-data-sceince-project_files/figure-html/unnamed-chunk-2-1.png" width="672" /> The local topics graph has a range of .06 to .85 and is fairly normally distributed with a good amount of variation. The mean ratio here is .45 seen in red.</p>
 <p>The opposing posts graph has a much larger spread ranging from 0 to .74 with a longer right tail giving it that clear right skew. The median ratio is .09 seen in green.</p>
 <p>The political party graph shows the amount of people in either the democratic party or republican party. In this study there were 475 Democrats and 593 Republicans.</p>
-<p><img src="/post/2019-04-25-the-begining-of-a-data-sceince-project_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(facebook, aes(oppose_any,local_topic))+geom_point()+ geom_smooth(method = &quot;lm&quot;)+ggtitle(&quot;Linear Relationship&quot;)</code></pre>
+<p><img src="/post/2019-04-25-the-begining-of-a-data-sceince-project_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>The correlation between opposing posts and local posts has a moderate negative correlation of 0.62</p>
+</div>
 
     </div>
   </article>
@@ -99,7 +129,22 @@
     </div>
     
 
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
     
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
   </body>

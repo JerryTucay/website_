@@ -55,7 +55,8 @@ model&amp;lt;- lm(local_topic~oppose_any, data= facebook)pander::pander(summary
       <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/04/25/the-begining-of-a-data-sceince-project/</guid>
-      <description>The beginning of every data prowl begins with some pretty graphs. In order to understand the data, to its fullest, uni variate and bivariate graphs are a great way to go about that. A univariate graph or a graph expressing only a single variable tells the story of the single graph. Answering several important questions. Is it normally distributed? Do the numbers/levels make sense? What do i need to fix/change and so on.</description>
+      <description>DataThe data set comes from the Pew research center. It explores 1068 different members of congress from the 114th and 115th congress and their Facebook post trends. The data set was already clean. \
+Variables\(\textbf{Party}\): Used to differentiate between a Democrat or a Republican.\(\textbf{Oppose any}\): The proportion of posts in which each member opposed Barack Obama, Hillary Clinton, or Democrats and/or liberals (if the member is a Republican) or the proportion of posts in which each member opposed Donald Trump or Republicans and/or conservatives (if the member is a Democrat), in each congress.</description>
     </item>
     
     <item>
